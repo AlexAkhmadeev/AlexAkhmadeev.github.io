@@ -24,3 +24,44 @@
 
 </body>
 </html>
+
+<!-- directive tempate -->
+<script type="text/ng-template" id="tmp-calc">
+    <div class="calculator-wpar">
+        <h2>Добавить продукт</h2>
+        <form name="add_product">
+            <label>Продукт<input type="text" class="form-control" ng-model="CalcCtrl.product.name" required></label>
+            <label>Цена<input type="text" class="form-control" ng-model="CalcCtrl.product.price" pattern="\d*" placeholder="Рубли..."></label>
+            <input type="submit" class="btn btn-primary" ng-click="CalcCtrl.addProduct(CalcCtrl.product, add_product)" value="Добавить">
+        </form>
+        <hr>
+        <h2>Корзина</h2>
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <td>Продукт</td>
+                <td>Цена</td>
+                <td>Цена со скидкой</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="product in CalcCtrl.products">
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.discountPrice}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <form name="discount_apply">
+            <table class="apply-form">
+                <tr>
+                    <td>Применить скидку</td>
+                    <td><input class="form-control discount" type="text" ng-model="CalcCtrl.discount" pattern="\d*"></td>
+                    <td> рублей </td>
+                    <td><input type="submit" class="btn btn-success" ng-click="CalcCtrl.apply(CalcCtrl.discount, discount_apply)" value="Применить"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</script>
+<!-- /directive template -->
