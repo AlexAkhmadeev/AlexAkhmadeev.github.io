@@ -5,7 +5,7 @@
     calc.directive("ngCalc", function() {
         return {
             restrict: 'E',
-            templateUrl: '/app/general/templates/_calculator.html',
+            templateUrl: 'app/general/templates/_calculator.html',
             replace: true,
             controllerAs: 'CalcCtrl',
             bindToController: true,
