@@ -1,104 +1,25 @@
 ﻿.body {
-    background: rgba(70, 70, 70, 1);
+    background: #333;
 }
 
-@font-face {
-    font-family: a_LCDNova; /* Гарнитура шрифта */
-    src: url(/fonts/a_LCDNova.ttf); /* Путь к файлу со шрифтом */
-}
-
-hr.white {
-    border-color: ghostwhite;
-}
-
-div.main {
-    background: rgba(70, 70, 70, 1);
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-/******************************* navBar ***********************************/
-.button-head {
-    width: 150px;
-}
-
-.vertical-delimiter {
-    color: ghostwhite;
-    font-size: 20px;
-}
-/******************************* /navBar ***********************************/
-
-
-
-/******************************* MainView ***********************************/
-p.main_head {
-    text-align: center;
-    color: ghostwhite;
-    font-size: 25px;
-}
-
-p.main_time {
-    text-align: center;
-    color: ghostwhite;
-    font-size: 20px;
-}
-/******************************* /MainView **********************************/
-
-
-
-/******************************* Header ***********************************/
-.header {
-    width: 100%;
-}
-
-.header td {
-    padding-top: 20px;
-}
-
-.header .title {
-    color: #f4f7f2;
-    font-family: a_LCDNova;
-    padding-left: 10px;
-    font-size: 26px;
+.calculator-wpar {
     width: 70%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 2% 0 0 2%;
+    padding: 50px 50px 50px 50px;
+    background: #FFF;
 }
 
-.header .title .fl {
-    color: #f71d28;
+thead {
+    font-weight: bold;
 }
 
-.header .controls {
-    float: right;
-    margin-left: 5px;
-}
-/******************************* /Header **********************************/
-
-
-
-/******************************* DropDown **********************************/
-button.dd_button {
-    width: 150px;
+input.discount {
+    width: 50px;
 }
 
-ul.dropdown-list {
-    list-style-type: none;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    position: absolute;
-    width: 150px;
+table.apply-form {
+    width: 40%;
+    font-weight: bold;
 }
-
-li.dd_item {
-    background: ghostwhite;
-    color:black;
-    padding: 2px 5px 2px 5px;
-    font-size: 16px;
-    border: 1px solid gray;
-}
-
-li.dd_item:hover {
-    background: white;
-    color:red;
-    cursor: pointer;
-}
-/******************************* /DropDown **********************************/
