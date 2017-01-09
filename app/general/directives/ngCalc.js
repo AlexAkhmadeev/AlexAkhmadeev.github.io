@@ -5,7 +5,7 @@
     calc.directive("ngCalc", function() {
         return {
             restrict: 'E',
-            templateUrl: '_calculator.html',
+            templateUrl: 'tmp-calc',
             replace: true,
             controllerAs: 'CalcCtrl',
             bindToController: true,
@@ -45,6 +45,7 @@
                     }
 
                     // Если есть остаток
+                    var discountResidual = discount - allSumResidual;
                     if(discount - allSumResidual) {
                         dearest.discountPrice = +(dearest.discountPrice) - discountResidual;
                     }
