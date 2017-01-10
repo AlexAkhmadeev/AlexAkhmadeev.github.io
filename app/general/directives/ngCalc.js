@@ -21,7 +21,7 @@
                 //Применение скидки
                 vm.apply = function(discount, form) {
                     if(discount[0] == "0") {
-                     alert("!!!);   
+                     alert("!!!");   
                     }
                     if(!form.$valid) return;
                     var products = vm.products;
