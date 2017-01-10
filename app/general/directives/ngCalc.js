@@ -56,7 +56,7 @@
                     if(discount - allSumResidual) {
                         dearest.discountPrice = +(dearest.discountPrice) - discountResidual;
                     }
-
+                return false;
                 };
 
                 //Добавление продукта
