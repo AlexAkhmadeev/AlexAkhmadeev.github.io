@@ -21,7 +21,7 @@
                 //Применение скидки
                 vm.apply = function(discount, form) {
                     if(discount[0] == "0") {
-                     alert("!!!");   
+                     alert("Введите число больше 1");   
                     }
                     if(!form.$valid) return;
                     var products = vm.products;
