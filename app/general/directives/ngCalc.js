@@ -20,9 +20,16 @@
 
                 //Применение скидки
                 vm.apply = function(discount, form) {
+                    if(discount[0] == "0") {
+                     alert("!!!);   
+                    }
                     if(!form.$valid) return;
                     var products = vm.products;
-
+                    if(!products.length) {
+                        alert("Добавьте хотя бы один товар");
+                        return;
+                    }
+                    
                     var totalSum = 0, mostPrice = 0, dearest;
                     for(var key in products) {
                         totalSum+= +products[key].price;
