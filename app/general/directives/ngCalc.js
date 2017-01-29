@@ -31,13 +31,15 @@
                     }
                     
                     var totalSum = 0, mostPrice = 0, dearest;
-                    for(var key in products) {
-                        totalSum+= +products[key].price;
-                        if(+products[key].price > mostPrice) {
-                            mostPrice = +products[key].price;
-                            dearest = products[key];
+                    
+                    products.forEach(function(product) {
+                        totalSum+= +product.price;
+                           if(+product.price > mostPrice) {
+                            mostPrice = +product.price;
+                            dearest = product;
                         }
-                    }
+                    });
+                
 
                     if(discount > totalSum) {
                         alert("Скидка не может быть больше суммы всех товаров!");
@@ -45,11 +47,11 @@
                     }
 
                     var allSumResidual = totalSum;
-                    for(var key in products) {
-                        var newPrice = +products[key].price * (1 - +discount/totalSum);
-                        products[key].discountPrice = Math.round(newPrice);
+                    products.forEach(function(product) {
+                        var newPrice = +product.price * (1 - +discount/totalSum);
+                        product.discountPrice = Math.round(newPrice);
                         allSumResidual -= Math.round(newPrice);
-                    }
+                    });
 
                     // Если есть остаток
                     var discountResidual = discount - allSumResidual;
